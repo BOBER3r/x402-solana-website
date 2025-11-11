@@ -293,7 +293,7 @@ export default function ChannelPaymentFlow({ onComplete }: ChannelPaymentFlowPro
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-xl font-semibold text-green-700 mb-1">Channel Payment Flow</h3>
+            <h3 className="text-xl font-semibold text-green-700 mb-1">Payment Channel Flow</h3>
             <p className="text-sm text-muted">Channel Mode • /api/kitten • $0.01 per request</p>
           </div>
           <div className="flex items-center gap-2">
@@ -310,7 +310,7 @@ export default function ChannelPaymentFlow({ onComplete }: ChannelPaymentFlowPro
                       Trying...
                     </>
                   ) : (
-                    <>Try Without Payment</>
+                    <>Try Without x402</>
                   )}
                 </button>
                 <button

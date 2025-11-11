@@ -24,7 +24,7 @@ export default function HackathonPage() {
               x402 Payment Channels
             </h1>
             <p className="text-lg text-muted">
-              HTTP Payment Channels Protocol for Solana
+              Payment Channels Protocol for Solana
             </p>
           </div>
 

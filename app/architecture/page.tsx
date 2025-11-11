@@ -266,7 +266,7 @@ const message = Buffer.concat([
 ]);
 // Total: 21 + 32 + 32 + 8 + 8 + 8 = 109 bytes
 
-// Client signs with Ed25519 (NOT keccak256!)
+// Client signs with Ed25519 
 const signature = nacl.sign.detached(message, clientKeypair.secretKey);
 
 // Verification on Solana uses Ed25519 instruction sysvar pattern
@@ -286,7 +286,7 @@ const signature = nacl.sign.detached(message, clientKeypair.secretKey);
               <Card>
                 <h3 className="font-semibold mb-2">1. Ed25519 Signature Verification</h3>
                 <p className="text-sm text-muted mb-2">
-                  All payment claims use Ed25519 signatures (NOT keccak256). On-chain verification via Ed25519 instruction sysvar:
+                  All payment claims use Ed25519 signatures. On-chain verification via Ed25519 instruction sysvar:
                 </p>
                 <CodeBlock
                   code={`// Construct exact 109-byte message

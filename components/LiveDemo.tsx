@@ -620,45 +620,45 @@ export default function LiveDemo() {
         </Card>
       </div>
 
-      {/* Comparison Summary */}
-      {testComparison && (
-        <Card className="p-8 bg-gradient-to-r from-blue-50 to-green-50 border-2 border-primary/30">
-          <h3 className="text-2xl font-bold text-center mb-6">Batch Test Results</h3>
+      {/*/!* Comparison Summary *!/*/}
+      {/*{testComparison && (*/}
+      {/*  <Card className="p-8 bg-gradient-to-r from-blue-50 to-green-50 border-2 border-primary/30">*/}
+      {/*    <h3 className="text-2xl font-bold text-center mb-6">Batch Test Results</h3>*/}
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            <div className="text-center">
-              <div className="text-sm text-muted mb-1">Speed Improvement</div>
-              <div className="text-3xl font-bold text-green-600 flex items-center justify-center gap-2">
-                <TrendingDown className="h-8 w-8" />
-                {testComparison.speedImprovement}%
-              </div>
-              <div className="text-xs text-muted mt-1">faster with channels</div>
-            </div>
+      {/*    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">*/}
+      {/*      <div className="text-center">*/}
+      {/*        <div className="text-sm text-muted mb-1">Speed Improvement</div>*/}
+      {/*        <div className="text-3xl font-bold text-green-600 flex items-center justify-center gap-2">*/}
+      {/*          <TrendingDown className="h-8 w-8" />*/}
+      {/*          {testComparison.speedImprovement}%*/}
+      {/*        </div>*/}
+      {/*        <div className="text-xs text-muted mt-1">faster with channels</div>*/}
+      {/*      </div>*/}
 
-            <div className="text-center">
-              <div className="text-sm text-muted mb-1">Cost Savings</div>
-              <div className="text-3xl font-bold text-green-600 flex items-center justify-center gap-2">
-                <Zap className="h-8 w-8" />
-                ${testComparison.costSavings}
-              </div>
-              <div className="text-xs text-muted mt-1">saved with channels</div>
-            </div>
+      {/*      <div className="text-center">*/}
+      {/*        <div className="text-sm text-muted mb-1">Cost Savings</div>*/}
+      {/*        <div className="text-3xl font-bold text-green-600 flex items-center justify-center gap-2">*/}
+      {/*          <Zap className="h-8 w-8" />*/}
+      {/*          ${testComparison.costSavings}*/}
+      {/*        </div>*/}
+      {/*        <div className="text-xs text-muted mt-1">saved with channels</div>*/}
+      {/*      </div>*/}
 
-            <div className="text-center">
-              <div className="text-sm text-muted mb-1">Time Saved</div>
-              <div className="text-3xl font-bold text-green-600">
-                {testComparison.timeSaved}s
-              </div>
-              <div className="text-xs text-muted mt-1">for {batchSize} transactions</div>
-            </div>
-          </div>
+      {/*      <div className="text-center">*/}
+      {/*        <div className="text-sm text-muted mb-1">Time Saved</div>*/}
+      {/*        <div className="text-3xl font-bold text-green-600">*/}
+      {/*          {testComparison.timeSaved}s*/}
+      {/*        </div>*/}
+      {/*        <div className="text-xs text-muted mt-1">for {batchSize} transactions</div>*/}
+      {/*      </div>*/}
+      {/*    </div>*/}
 
-          <div className="text-center text-sm text-muted">
-            Channel payments are <strong className="text-green-700">{testComparison.speedImprovement}% faster</strong> and cost{" "}
-            <strong className="text-green-700">$0</strong> in transaction fees compared to on-chain payments.
-          </div>
-        </Card>
-      )}
+      {/*    <div className="text-center text-sm text-muted">*/}
+      {/*      Channel payments are <strong className="text-green-700">{testComparison.speedImprovement}% faster</strong> and cost{" "}*/}
+      {/*      <strong className="text-green-700">$0</strong> in transaction fees compared to on-chain payments.*/}
+      {/*    </div>*/}
+      {/*  </Card>*/}
+      {/*)}*/}
 
       {/* Live Stats */}
       <div>
