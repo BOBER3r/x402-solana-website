@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const footerNavigation = {
   product: [
-    { name: "Documentation", href: "/docs" },
+    { name: "Documentation", href: "/docs/getting-started" },
     { name: "Architecture", href: "/architecture" },
     { name: "Demo", href: "/demo" },
   ],

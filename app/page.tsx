@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Server, Zap, Code2, Shield, ArrowRight, CheckCircle2, GitBranch } from "lucide-react";
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import CodeBlock from "@/components/CodeBlock";
 import LiveDemo from "@/components/LiveDemo";
+import beaverImage from "./beaver.png";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -33,36 +35,53 @@ export default function Home() {
             animate="animate"
             variants={staggerContainer}
           >
-            <motion.div
-              className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 border border-orange-300 rounded-full text-sm text-orange-800 font-medium mb-4"
-              variants={fadeInUp}
-            >
-              <Shield className="h-4 w-4" />
-              Beta Version - Seeking Security Audit
-            </motion.div>
+            <div className="flex flex-wrap items-center justify-center gap-2.5 mb-6">
+              <motion.div
+                className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 border border-orange-300 rounded-full text-sm text-orange-800 font-medium"
+                variants={fadeInUp}
+              >
+                <Shield className="h-4 w-4" />
+                Beta Version - Seeking Security Audit
+              </motion.div>
+
+              <motion.div
+                className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm text-primary font-medium"
+                variants={fadeInUp}
+              >
+                <Zap className="h-4 w-4" />
+                HTTP 402 Payment Required Protocol on Solana
+              </motion.div>
+            </div>
 
             <motion.div
-              className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm text-primary font-medium mb-6"
+              className="mb-6 flex justify-center"
               variants={fadeInUp}
             >
-              <Zap className="h-4 w-4" />
-              HTTP 402 Payment Required Protocol on Solana
+              <Image
+                src={beaverImage}
+                alt="BoberPay Beaver Logo"
+                width={150}
+                height={150}
+                className="rounded-full"
+                priority
+              />
             </motion.div>
 
             <motion.h1
               className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6"
               variants={fadeInUp}
             >
-              BOBERPay.<br />
-              One Verification API.<br />
-              <span className="text-primary">Zero Compromises.</span>
+              BoberPay.<br />
+              <span className="text-3xl sm:text-4xl lg:text-5xl">x402 Payment Channels</span>
+              <br />
+              <span className="text-primary text-3xl sm:text-4xl lg:text-5xl">Payment Channels Protocol for Solana.</span>
             </motion.h1>
 
             <motion.p
               className="text-xl text-muted mb-10 max-w-3xl mx-auto leading-relaxed"
               variants={fadeInUp}
             >
-              x402-solana's verification layer now supports both <span className="font-semibold text-foreground">on-chain USDC transactions</span> and <span className="font-semibold text-foreground">instant payment channels</span> through a unified API. Choose your payment scheme, we handle the rest.
+              x402 brings HTTP 402 Payment Required to life with Solana payment channels. Our protocol enables micropayments for API requests with 99.8% cost savings compared to solana transaction, making true pay-per-use APIs economically viable.
             </motion.p>
 
             <motion.div
@@ -106,36 +125,133 @@ if (result.valid) {
         </div>
       </section>
 
-      {/* Beta Disclaimer Section */}
-      <section className="py-12 bg-orange-50 border-y border-orange-200">
-        <div className="mx-auto max-w-5xl px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-sm border border-orange-200 p-6">
-            <div className="flex items-start gap-4">
-              <Shield className="h-6 w-6 text-orange-600 flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="text-lg font-semibold text-orange-900 mb-2">
-                  Beta/Hackathon Version - Use at Your Own Risk
-                </h3>
-                <p className="text-sm text-orange-800 mb-3">
-                  This project was built for a hackathon and is currently in <strong>beta</strong>. While functional, it has <strong>not undergone a professional security audit</strong> and should not be used in production environments with real funds.
-                </p>
-                <div className="space-y-2 text-sm text-orange-700">
-                  <div className="flex items-start gap-2">
-                    <span className="text-orange-600 mt-0.5">•</span>
-                    <span><strong>Seeking Audit:</strong> We are actively looking for security researchers and auditors to review the smart contracts and payment channel implementation.</span>
+      {/* NPM Packages Section */}
+      <section className="py-24 border-t border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+              Modular NPM Packages
+            </h2>
+            <p className="text-lg text-muted max-w-2xl mx-auto">
+              Choose the packages you need for your architecture
+            </p>
+          </motion.div>
+
+          <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12"
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+          >
+            <motion.div variants={fadeInUp}>
+              <Card className="h-full">
+                <h3 className="text-lg font-semibold mb-4">X402 Protocol Packages</h3>
+                <div className="space-y-3">
+                  <div>
+                    <a
+                        href="https://www.npmjs.com/package/@x402-solana/server"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-sm text-primary mb-1 hover:underline inline-block"
+                    >
+                      @x402-solana/server
+                    </a>
+                    <p className="text-xs text-muted">Server middleware with unified payment verification</p>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <span className="text-orange-600 mt-0.5">•</span>
-                    <span><strong>Devnet Only:</strong> All demos use Solana Devnet with test tokens. Do not use mainnet without thorough auditing.</span>
+                  <div>
+                    <a
+                        href="https://www.npmjs.com/package/@x402-solana/client"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-sm text-primary mb-1 hover:underline inline-block"
+                    >
+                      @x402-solana/client
+                    </a>
+                    <p className="text-xs text-muted">Client SDK for on-chain USDC payments</p>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <span className="text-orange-600 mt-0.5">•</span>
-                    <span><strong>Educational Purpose:</strong> This implementation demonstrates HTTP 402 concepts and payment channels - use for learning and experimentation.</span>
+                  <div>
+                    <a
+                        href="https://www.npmjs.com/package/@x402-solana/core"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-sm text-primary mb-1 hover:underline inline-block"
+                    >
+                      @x402-solana/core
+                    </a>
+                    <p className="text-xs text-muted">Unified verification for both on-chain and channel payments</p>
                   </div>
                 </div>
-              </div>
+              </Card>
+            </motion.div>
+
+            <motion.div variants={fadeInUp}>
+              <Card className="h-full border-2 border-primary/20">
+                <h3 className="text-lg font-semibold mb-4">Payment Channel Packages</h3>
+                <div className="space-y-3">
+                  <div>
+                    <a
+                        href="https://www.npmjs.com/package/@solana-payment-channel/server"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-sm text-primary mb-1 hover:underline inline-block"
+                    >
+                      @solana-payment-channel/server
+                    </a>
+                    <p className="text-xs text-muted">Channel management with automatic X402 fallback</p>
+                  </div>
+                  <div>
+                    <a
+                        href="https://www.npmjs.com/package/@solana-payment-channel/client"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-sm text-primary mb-1 hover:underline inline-block"
+                    >
+                      @solana-payment-channel/client
+                    </a>
+                    <p className="text-xs text-muted">Client SDK for creating and managing payment channels</p>
+                  </div>
+                  <div>
+                    <a
+                        href="https://www.npmjs.com/package/@solana-payment-channel/core"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-sm text-primary mb-1 hover:underline inline-block"
+                    >
+                      @solana-payment-channel/core
+                    </a>
+                    <p className="text-xs text-muted">Channel lifecycle, state management, claim generation</p>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+          >
+            <p className="text-sm text-muted mb-6">
+              Use @x402-solana for on-chain only, or add @solana-payment-channel for instant, zero-fee channel payments. Server verification works with both.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button href="https://github.com/BOBER3r/x402-solana-toolkit" variant="secondary" external>
+                X402 Toolkit on GitHub
+              </Button>
+              <Button href="https://github.com/BOBER3r/solana-payment-channel-kit" variant="secondary" external>
+                Payment Channels on GitHub
+              </Button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -419,73 +535,73 @@ if (result.valid) {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-              Built for Developers
-            </h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
-              Everything you need to implement micropayments in your HTTP APIs
-            </p>
-          </motion.div>
+      {/*/!* Features Section *!/*/}
+      {/*<section className="py-24">*/}
+      {/*  <div className="mx-auto max-w-7xl px-6 lg:px-8">*/}
+      {/*    <motion.div*/}
+      {/*      className="text-center mb-16"*/}
+      {/*      initial={{ opacity: 0, y: 20 }}*/}
+      {/*      whileInView={{ opacity: 1, y: 0 }}*/}
+      {/*      viewport={{ once: true }}*/}
+      {/*      transition={{ duration: 0.5 }}*/}
+      {/*    >*/}
+      {/*      <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">*/}
+      {/*        Built for Developers*/}
+      {/*      </h2>*/}
+      {/*      <p className="text-lg text-muted max-w-2xl mx-auto">*/}
+      {/*        Everything you need to implement micropayments in your HTTP APIs*/}
+      {/*      </p>*/}
+      {/*    </motion.div>*/}
 
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            <motion.div variants={fadeInUp}>
-              <Card>
-                <Server className="h-8 w-8 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Framework Agnostic</h3>
-                <p className="text-sm text-muted">
-                  Works with Express, NestJS, Fastify, and any Node.js framework
-                </p>
-              </Card>
-            </motion.div>
+      {/*    <motion.div*/}
+      {/*      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"*/}
+      {/*      initial="initial"*/}
+      {/*      whileInView="animate"*/}
+      {/*      viewport={{ once: true }}*/}
+      {/*      variants={staggerContainer}*/}
+      {/*    >*/}
+      {/*      <motion.div variants={fadeInUp}>*/}
+      {/*        <Card>*/}
+      {/*          <Server className="h-8 w-8 text-primary mb-4" />*/}
+      {/*          <h3 className="text-lg font-semibold mb-2">Framework Agnostic</h3>*/}
+      {/*          <p className="text-sm text-muted">*/}
+      {/*            Works with Express, NestJS, Fastify, and any Node.js framework*/}
+      {/*          </p>*/}
+      {/*        </Card>*/}
+      {/*      </motion.div>*/}
 
-            <motion.div variants={fadeInUp}>
-              <Card>
-                <GitBranch className="h-8 w-8 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Flexible Payment Options</h3>
-                <p className="text-sm text-muted">
-                  Choose on-chain for simplicity or channels for speed. Same API handles both.
-                </p>
-              </Card>
-            </motion.div>
+      {/*      <motion.div variants={fadeInUp}>*/}
+      {/*        <Card>*/}
+      {/*          <GitBranch className="h-8 w-8 text-primary mb-4" />*/}
+      {/*          <h3 className="text-lg font-semibold mb-2">Flexible Payment Options</h3>*/}
+      {/*          <p className="text-sm text-muted">*/}
+      {/*            Choose on-chain for simplicity or channels for speed. Same API handles both.*/}
+      {/*          </p>*/}
+      {/*        </Card>*/}
+      {/*      </motion.div>*/}
 
-            <motion.div variants={fadeInUp}>
-              <Card>
-                <Code2 className="h-8 w-8 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Developer First</h3>
-                <p className="text-sm text-muted">
-                  Simple TypeScript API with full type safety and autocomplete
-                </p>
-              </Card>
-            </motion.div>
+      {/*      <motion.div variants={fadeInUp}>*/}
+      {/*        <Card>*/}
+      {/*          <Code2 className="h-8 w-8 text-primary mb-4" />*/}
+      {/*          <h3 className="text-lg font-semibold mb-2">Developer First</h3>*/}
+      {/*          <p className="text-sm text-muted">*/}
+      {/*            Simple TypeScript API with full type safety and autocomplete*/}
+      {/*          </p>*/}
+      {/*        </Card>*/}
+      {/*      </motion.div>*/}
 
-            <motion.div variants={fadeInUp}>
-              <Card>
-                <Shield className="h-8 w-8 text-primary mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Production Ready</h3>
-                <p className="text-sm text-muted">
-                  Full lifecycle management with automatic state handling and fallbacks
-                </p>
-              </Card>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      {/*      <motion.div variants={fadeInUp}>*/}
+      {/*        <Card>*/}
+      {/*          <Shield className="h-8 w-8 text-primary mb-4" />*/}
+      {/*          <h3 className="text-lg font-semibold mb-2">Production Ready</h3>*/}
+      {/*          <p className="text-sm text-muted">*/}
+      {/*            Full lifecycle management with automatic state handling and fallbacks*/}
+      {/*          </p>*/}
+      {/*        </Card>*/}
+      {/*      </motion.div>*/}
+      {/*    </motion.div>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
 
       {/* Quick Start Section */}
       <section className="py-24 border-t border-border bg-gray-50/50">
@@ -546,7 +662,7 @@ app.post('/api/verify', async (req, res) => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <h3 className="text-lg font-semibold mb-4">Client: Choose Your SDK</h3>
+              <h3 className="text-lg font-semibold mb-4">Client SDK</h3>
               <CodeBlock
                 code={`// Option 1: On-chain payments
 import { X402Client } from '@x402-solana/client';
@@ -593,135 +709,6 @@ const response = await channelClient.pay({
         </div>
       </section>
 
-      {/* NPM Packages Section */}
-      <section className="py-24 border-t border-border">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-              Modular NPM Packages
-            </h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
-              Choose the packages you need for your architecture
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12"
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            <motion.div variants={fadeInUp}>
-              <Card className="h-full">
-                <h3 className="text-lg font-semibold mb-4">X402 Protocol Packages</h3>
-                <div className="space-y-3">
-                  <div>
-                    <a
-                      href="https://www.npmjs.com/package/@x402-solana/server"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-mono text-sm text-primary mb-1 hover:underline inline-block"
-                    >
-                      @x402-solana/server
-                    </a>
-                    <p className="text-xs text-muted">Server middleware with unified payment verification</p>
-                  </div>
-                  <div>
-                    <a
-                      href="https://www.npmjs.com/package/@x402-solana/client"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-mono text-sm text-primary mb-1 hover:underline inline-block"
-                    >
-                      @x402-solana/client
-                    </a>
-                    <p className="text-xs text-muted">Client SDK for on-chain USDC payments</p>
-                  </div>
-                  <div>
-                    <a
-                      href="https://www.npmjs.com/package/@x402-solana/core"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-mono text-sm text-primary mb-1 hover:underline inline-block"
-                    >
-                      @x402-solana/core
-                    </a>
-                    <p className="text-xs text-muted">Unified verification for both on-chain and channel payments</p>
-                  </div>
-                </div>
-              </Card>
-            </motion.div>
-
-            <motion.div variants={fadeInUp}>
-              <Card className="h-full border-2 border-primary/20">
-                <h3 className="text-lg font-semibold mb-4">Payment Channel Packages</h3>
-                <div className="space-y-3">
-                  <div>
-                    <a
-                      href="https://www.npmjs.com/package/@solana-payment-channel/server"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-mono text-sm text-primary mb-1 hover:underline inline-block"
-                    >
-                      @solana-payment-channel/server
-                    </a>
-                    <p className="text-xs text-muted">Channel management with automatic X402 fallback</p>
-                  </div>
-                  <div>
-                    <a
-                      href="https://www.npmjs.com/package/@solana-payment-channel/client"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-mono text-sm text-primary mb-1 hover:underline inline-block"
-                    >
-                      @solana-payment-channel/client
-                    </a>
-                    <p className="text-xs text-muted">Client SDK for creating and managing payment channels</p>
-                  </div>
-                  <div>
-                    <a
-                      href="https://www.npmjs.com/package/@solana-payment-channel/core"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-mono text-sm text-primary mb-1 hover:underline inline-block"
-                    >
-                      @solana-payment-channel/core
-                    </a>
-                    <p className="text-xs text-muted">Channel lifecycle, state management, claim generation</p>
-                  </div>
-                </div>
-              </Card>
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <p className="text-sm text-muted mb-6">
-              Use @x402-solana for on-chain only, or add @solana-payment-channel for instant, zero-fee channel payments. Server verification works with both.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="https://github.com/BOBER3r/x402-solana-toolkit" variant="secondary" external>
-                X402 Toolkit on GitHub
-              </Button>
-              <Button href="https://github.com/BOBER3r/solana-payment-channel-kit" variant="secondary" external>
-                Payment Channels on GitHub
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Payment Channels Highlight */}
       <section className="py-24 bg-gradient-to-br from-blue-50 to-gray-50 border-t border-border">
@@ -836,6 +823,39 @@ const response = await channelClient.pay({
               </Button>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Beta Disclaimer Section */}
+      <section className="py-12 bg-orange-50 border-y border-orange-200">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <div className="bg-white rounded-lg shadow-sm border border-orange-200 p-6">
+            <div className="flex items-start gap-4">
+              <Shield className="h-6 w-6 text-orange-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-lg font-semibold text-orange-900 mb-2">
+                  Beta/Hackathon Version - Use at Your Own Risk
+                </h3>
+                <p className="text-sm text-orange-800 mb-3">
+                  This project was built for a hackathon and is currently in <strong>beta</strong>. While functional, it has <strong>not undergone a professional security audit</strong> and should not be used in production environments with real funds.
+                </p>
+                <div className="space-y-2 text-sm text-orange-700">
+                  <div className="flex items-start gap-2">
+                    <span className="text-orange-600 mt-0.5">•</span>
+                    <span><strong>Seeking Audit:</strong> We are actively looking for security researchers and auditors to review the smart contracts and payment channel implementation.</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-orange-600 mt-0.5">•</span>
+                    <span><strong>Devnet Only:</strong> All demos use Solana Devnet with test tokens. Do not use mainnet without thorough auditing.</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-orange-600 mt-0.5">•</span>
+                    <span><strong>Educational Purpose:</strong> This implementation demonstrates HTTP 402 concepts and payment channels - use for learning and experimentation.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

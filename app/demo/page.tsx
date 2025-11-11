@@ -114,10 +114,10 @@ export default function DemoPage() {
           {/*)}*/}
 
           {/* Batch Performance Test */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold mb-8 text-center">Batch Performance Comparison</h2>
-            <LiveDemo />
-          </section>
+          {/*<section className="mb-20">*/}
+          {/*  <h2 className="text-3xl font-bold mb-8 text-center">Batch Performance Comparison</h2>*/}
+          {/*  <LiveDemo />*/}
+          {/*</section>*/}
 
           {/* Educational Note */}
           <Card className="bg-gray-50 border-gray-200">

@@ -245,14 +245,14 @@ export default function HackathonPage() {
             <h2 className="text-2xl font-bold mb-6">Project Links</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card>
-                <h3 className="font-semibold mb-3">Repository</h3>
+                <h3 className="font-semibold mb-3">x402 Devkit Repository</h3>
                 <a
-                  href="https://github.com/x402-solana"
+                  href="https://github.com/x402-solana-toolkit"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-primary hover:underline"
                 >
-                  github.com/x402-solana
+                  github.com/x402-solana-toolkit
                 </a>
               </Card>
 
@@ -279,14 +279,14 @@ export default function HackathonPage() {
               </Card>
 
               <Card>
-                <h3 className="font-semibold mb-3">Live Demo</h3>
+                <h3 className="font-semibold mb-3">Solana Payment Channel Repository</h3>
                 <a
-                  href="https://demo.x402.dev"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-primary hover:underline"
+                    href="https://github.com/BOBER3r/solana-payment-channel-kit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-primary hover:underline"
                 >
-                  demo.x402.dev
+                  github.com/x402-solana-toolkit
                 </a>
               </Card>
             </div>

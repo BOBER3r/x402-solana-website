@@ -7,8 +7,7 @@ import Card from "@/components/Card";
 import { CheckCircle2, Zap, DollarSign, Clock } from "lucide-react";
 
 const sections = [
-  { id: "overview", title: "What You're Building" },
-  { id: "problem", title: "The Problem" },
+  { id: "overview", title: "Overview" },
   { id: "quick-start", title: "Quick Start" },
   { id: "packages", title: "Package Ecosystem" },
   { id: "performance", title: "Performance" },
@@ -97,13 +96,14 @@ export default function GettingStartedPage() {
               cost-effective micropayments on Solana
             </p>
 
-            {/* What You're Building */}
+            {/* Overview */}
             <section id="overview" className="mb-16 scroll-mt-24">
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                 <Zap className="h-6 w-6 text-primary" />
-                What You're Building
+                Overview
               </h2>
-              <Card>
+
+              <Card className="mb-6">
                 <p className="mb-4">A complete payment system that combines:</p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
@@ -125,14 +125,11 @@ export default function GettingStartedPage() {
                   </p>
                 </div>
               </Card>
-            </section>
 
-            {/* The Problem */}
-            <section id="problem" className="mb-16 scroll-mt-24">
-              <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                <DollarSign className="h-6 w-6 text-primary" />
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                <DollarSign className="h-5 w-5 text-primary" />
                 The Problem This Solves
-              </h2>
+              </h3>
 
               <div className="space-y-4">
                 <Card>

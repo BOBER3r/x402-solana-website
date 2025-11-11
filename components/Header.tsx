@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 
 const navigation = [
   { name: "Why Payment Channels", href: "/payment-channels" },
-  { name: "Docs", href: "/docs" },
+  { name: "Docs", href: "/docs/getting-started" },
   { name: "Solana Program", href: "/architecture" },
   { name: "Live Demo", href: "/demo" },
   { name: "Hackathon", href: "/hackathon" },
