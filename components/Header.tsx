@@ -6,10 +6,10 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navigation = [
-  { name: "Payment Channels", href: "/payment-channels" },
+  { name: "Why Payment Channels", href: "/payment-channels" },
   { name: "Docs", href: "/docs" },
-  { name: "Architecture", href: "/architecture" },
-  { name: "Demo", href: "/demo" },
+  { name: "Solana Program", href: "/architecture" },
+  { name: "Live Demo", href: "/demo" },
   { name: "Hackathon", href: "/hackathon" },
 ];
 

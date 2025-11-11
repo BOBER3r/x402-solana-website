@@ -177,7 +177,7 @@ export default function PaymentChannelsPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold mb-4">Dramatic Cost Savings</h2>
+            <h2 className="text-3xl font-bold mb-4"> Cost Efficiency</h2>
             <p className="text-lg text-muted mb-12 max-w-3xl">
               Comparison for 10,000 API requests over 1 hour
             </p>
