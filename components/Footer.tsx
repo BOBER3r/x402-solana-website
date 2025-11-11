@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import beaverImage from "@/app/beaver.png";
 
 const footerNavigation = {
   product: [
@@ -24,6 +26,20 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           <div className="col-span-2 lg:col-span-1">
+            <Link
+              href="https://github.com/BOBER3r"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mb-4 transition-transform hover:scale-105"
+            >
+              <Image
+                src={beaverImage}
+                alt="BoberPay Beaver Logo"
+                width={60}
+                height={60}
+                className="rounded-full"
+              />
+            </Link>
             <h3 className="text-xl font-bold tracking-tight mb-4">
               x<span className="text-primary">402-solana</span>
             </h3>
