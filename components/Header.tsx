@@ -28,7 +28,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="text-xl font-bold tracking-tight">
-              x<span className="text-primary">402-solana</span>
+              x<span className="text-primary">BoberPay</span>
             </span>
           </Link>
         </div>
