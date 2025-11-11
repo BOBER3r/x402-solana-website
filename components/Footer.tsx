@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           <div className="col-span-2 lg:col-span-1">
             <h3 className="text-xl font-bold tracking-tight mb-4">
-              x<span className="text-primary">402</span>
+              x<span className="text-primary">402-solana</span>
             </h3>
             <p className="text-sm text-muted max-w-xs">
               Payment channel protocol for HTTP APIs on Solana. Built for developers who need efficient micropayments.

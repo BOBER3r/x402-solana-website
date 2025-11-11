@@ -5,6 +5,7 @@ import { Server, Zap, Code2, Shield, ArrowRight, CheckCircle2, GitBranch } from 
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import CodeBlock from "@/components/CodeBlock";
+import LiveDemo from "@/components/LiveDemo";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -93,6 +94,20 @@ if (result.valid) {
                 className="text-left"
               />
             </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Live Demo Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-white border-y border-border">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <LiveDemo />
           </motion.div>
         </div>
       </section>
