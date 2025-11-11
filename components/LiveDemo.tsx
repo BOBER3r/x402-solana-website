@@ -16,17 +16,40 @@ interface BatchProgress {
   totalCost: number;
 }
 
+interface Transaction {
+  index: number;
+  signature: string;
+  duration: number;
+  explorerUrl: string;
+  status: string;
+}
+
+interface ChannelTransaction {
+  step: string;
+  duration: number;
+  signature?: string;
+  channelId?: string;
+  explorerUrl: string;
+}
+
 interface Stats {
   onChain: {
     count: number;
     avgDuration: number;
     totalCost: string;
+    transactions?: Transaction[];
   };
   channel: {
     count: number;
     avgDuration: number;
     totalCost: string;
     note?: string;
+    transactions?: any[];
+    channelTx?: {
+      open: ChannelTransaction;
+      addFunds: ChannelTransaction;
+      close: ChannelTransaction;
+    };
   };
 }
 
