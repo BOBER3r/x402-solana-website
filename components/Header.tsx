@@ -69,12 +69,12 @@ export default function Header() {
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
-            href="https://github.com/BOBER3r"
+            href="https://github.com/BOBER3r/solana-payment-channel-kit"
             target="_blank"
             rel="noopener noreferrer"
             className="px-3 py-2 rounded-md text-sm font-medium text-muted hover:text-foreground hover:bg-blue-50 transition-all duration-200"
           >
-            GitHub
+            Github
           </Link>
         </div>
       </nav>

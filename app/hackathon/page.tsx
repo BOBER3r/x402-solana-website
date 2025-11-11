@@ -35,7 +35,7 @@ export default function HackathonPage() {
               <p className="text-muted mb-4">
                 x402 brings HTTP 402 Payment Required to life with Solana payment channels.
                 Our protocol enables micropayments for API requests with 99.8% cost savings
-                compared to traditional payment processors, making true pay-per-use APIs economically viable.
+                compared to solana transaction, making true pay-per-use APIs economically viable.
               </p>
               <p className="text-muted">
                 Built for developers, x402 provides framework-agnostic TypeScript SDKs that integrate

@@ -53,7 +53,7 @@ export default function Home() {
               className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mb-6"
               variants={fadeInUp}
             >
-              Two Ways to Pay.<br />
+              BOBERPay.<br />
               One Verification API.<br />
               <span className="text-primary">Zero Compromises.</span>
             </motion.h1>
