@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
-import { Trophy, Target, Code, Users, Rocket, CheckCircle2 } from "lucide-react";
+import CodeBlock from "@/components/CodeBlock";
+import { Trophy, Target, Code, Users, Rocket, CheckCircle2, DollarSign } from "lucide-react";
 
 export default function HackathonPage() {
   return (
@@ -46,49 +47,37 @@ export default function HackathonPage() {
 
           {/* Problem Statement */}
           <section className="mb-16">
-            <h2 className="text-2xl font-bold mb-6">Problem Statement</h2>
-            <Card>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-red-600 text-sm font-bold">1</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">Micropayment Economics</h3>
-                    <p className="text-sm text-muted">
-                      Traditional payment processors charge $0.30 + 2.9% per transaction, making
-                      micropayments under $10 economically unviable. A $0.01 API call costs $0.329 to process.
-                    </p>
-                  </div>
-                </div>
+            <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <DollarSign className="h-6 w-6 text-primary" />
+              The Problem This Solves
+            </h2>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-red-600 text-sm font-bold">2</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">API Monetization Gap</h3>
-                    <p className="text-sm text-muted">
-                      Developers cannot monetize APIs at granular levels. Options are limited to
-                      free tiers, monthly subscriptions, or expensive per-request pricing.
-                    </p>
-                  </div>
-                </div>
+            <div className="space-y-4">
+              <Card>
+                <h3 className="text-lg font-semibold mb-3 text-red-600">Traditional On-Chain Payments (scheme: 'exact')</h3>
+                <CodeBlock
+                  code={`Every API call → Blockchain transaction → 400-800ms latency → $0.0005 fee
+❌ Too slow for real-time APIs
+❌ Too expensive for sub-cent payments
+❌ Can't scale to 100+ requests/minute`}
+                  language="text"
+                />
+              </Card>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-red-600 text-sm font-bold">3</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold mb-1">HTTP 402 Unused</h3>
-                    <p className="text-sm text-muted">
-                      HTTP 402 Payment Required has existed since 1997 but remains largely unused
-                      due to lack of practical micropayment infrastructure.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </Card>
+              <Card>
+                <h3 className="text-lg font-semibold mb-3 text-green-600">Payment Channels Solution (scheme: 'channel')</h3>
+                <CodeBlock
+                  code={`Setup: 1 on-chain transaction (open channel)
+Usage: Unlimited off-chain payments → <10ms latency → $0 fees
+Settle: 1 on-chain transaction (claim batch)
+
+✅ 91% faster than on-chain
+✅ 94% cheaper overall
+✅ Scales to thousands of req/min`}
+                  language="text"
+                />
+              </Card>
+            </div>
           </section>
 
           {/* Solution */}
@@ -99,8 +88,7 @@ export default function HackathonPage() {
                 <Target className="h-8 w-8 text-primary mb-3" />
                 <h3 className="font-semibold mb-2">Payment Channels</h3>
                 <p className="text-sm text-muted">
-                  Unidirectional payment channels on Solana reduce transaction costs to ~$0.0005,
-                  requiring only 2 on-chain transactions per channel lifecycle.
+                  Adapting x402 to accept unidirectional payment channels.
                 </p>
               </Card>
 
@@ -121,13 +109,6 @@ export default function HackathonPage() {
                 </p>
               </Card>
 
-              <Card>
-                <Users className="h-8 w-8 text-primary mb-3" />
-                <h3 className="font-semibold mb-2">Production Ready</h3>
-                <p className="text-sm text-muted">
-                  Complete channel lifecycle management, error handling, and automatic state synchronization.
-                </p>
-              </Card>
             </div>
           </section>
 
@@ -257,6 +238,18 @@ export default function HackathonPage() {
               </Card>
 
               <Card>
+                <h3 className="font-semibold mb-3">Solana Payment Channel Repository</h3>
+                <a
+                    href="https://github.com/BOBER3r/solana-payment-channel-kit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-primary hover:underline"
+                >
+                  github.com/x402-solana-toolkit
+                </a>
+              </Card>
+
+              <Card>
                 <h3 className="font-semibold mb-3">Documentation</h3>
                 <a
                   href="/docs"
@@ -278,17 +271,6 @@ export default function HackathonPage() {
                 </a>
               </Card>
 
-              <Card>
-                <h3 className="font-semibold mb-3">Solana Payment Channel Repository</h3>
-                <a
-                    href="https://github.com/BOBER3r/solana-payment-channel-kit"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-primary hover:underline"
-                >
-                  github.com/x402-solana-toolkit
-                </a>
-              </Card>
             </div>
           </section>
 
