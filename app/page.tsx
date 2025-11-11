@@ -34,6 +34,14 @@ export default function Home() {
             variants={staggerContainer}
           >
             <motion.div
+              className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 border border-orange-300 rounded-full text-sm text-orange-800 font-medium mb-4"
+              variants={fadeInUp}
+            >
+              <Shield className="h-4 w-4" />
+              Beta Version - Seeking Security Audit
+            </motion.div>
+
+            <motion.div
               className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm text-primary font-medium mb-6"
               variants={fadeInUp}
             >
@@ -95,6 +103,39 @@ if (result.valid) {
               />
             </motion.div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Beta Disclaimer Section */}
+      <section className="py-12 bg-orange-50 border-y border-orange-200">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <div className="bg-white rounded-lg shadow-sm border border-orange-200 p-6">
+            <div className="flex items-start gap-4">
+              <Shield className="h-6 w-6 text-orange-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-lg font-semibold text-orange-900 mb-2">
+                  Beta/Hackathon Version - Use at Your Own Risk
+                </h3>
+                <p className="text-sm text-orange-800 mb-3">
+                  This project was built for a hackathon and is currently in <strong>beta</strong>. While functional, it has <strong>not undergone a professional security audit</strong> and should not be used in production environments with real funds.
+                </p>
+                <div className="space-y-2 text-sm text-orange-700">
+                  <div className="flex items-start gap-2">
+                    <span className="text-orange-600 mt-0.5">•</span>
+                    <span><strong>Seeking Audit:</strong> We are actively looking for security researchers and auditors to review the smart contracts and payment channel implementation.</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-orange-600 mt-0.5">•</span>
+                    <span><strong>Devnet Only:</strong> All demos use Solana Devnet with test tokens. Do not use mainnet without thorough auditing.</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-orange-600 mt-0.5">•</span>
+                    <span><strong>Educational Purpose:</strong> This implementation demonstrates HTTP 402 concepts and payment channels - use for learning and experimentation.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -787,7 +828,7 @@ const response = await channelClient.pay({
                 Read Documentation
               </Button>
               <Button
-                href="/examples"
+                href="/demo"
                 variant="secondary"
                 className="bg-transparent border-white text-white hover:bg-white/10"
               >

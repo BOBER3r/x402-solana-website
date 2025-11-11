@@ -38,7 +38,7 @@ export default function TransactionCard({ result }: TransactionCardProps) {
               <Clock className="h-5 w-5 text-orange-600" />
             )}
             <h3 className="font-semibold text-lg">
-              {isChannel ? "Channel Payment ⚡" : "On-Chain Payment 🔶"}
+              {isChannel ? "Channel Payment " : "On-Chain Payment "}
             </h3>
           </div>
           <span

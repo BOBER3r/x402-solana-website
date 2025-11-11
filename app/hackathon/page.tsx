@@ -309,7 +309,7 @@ export default function HackathonPage() {
                     Get Started
                   </Button>
                   <Button
-                    href="/examples"
+                    href="/demo"
                     variant="secondary"
                     className="bg-transparent border-white text-white hover:bg-white/10"
                   >

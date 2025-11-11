@@ -796,7 +796,7 @@ console.log(\`View claim: https://explorer.solana.com/tx/\${claimSignature}?clus
                   <p className="text-sm text-muted mb-4">
                     Check out working examples for different frameworks
                   </p>
-                  <a href="/examples" className="text-sm text-primary hover:underline">
+                  <a href="/demo" className="text-sm text-primary hover:underline">
                     View Examples →
                   </a>
                 </Card>

@@ -254,7 +254,7 @@ export default function PaymentChannelsPage() {
           >
             <h2 className="text-3xl font-bold mb-4">Framework Integration</h2>
             <p className="text-lg text-muted mb-12 max-w-3xl">
-              Production-ready middleware for Express, NestJS, and Fastify
+              Middleware examples for Express, NestJS, and Fastify
             </p>
           </motion.div>
 

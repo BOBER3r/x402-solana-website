@@ -445,7 +445,7 @@ export default function LiveDemo() {
           <input
             type="number"
             min="1"
-            max="50"
+            max="20"
             value={batchSize}
             onChange={(e) => setBatchSize(Number(e.target.value))}
             disabled={onChainRunning || channelRunning}
@@ -489,7 +489,7 @@ export default function LiveDemo() {
         <Card className="p-6 border-2 border-orange-200">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="text-xl font-semibold">On-Chain Payments 🔶</h3>
+              <h3 className="text-xl font-semibold">On-Chain Payments </h3>
               {onChainRunning && (
                 <Loader2 className="h-5 w-5 animate-spin text-orange-600" />
               )}

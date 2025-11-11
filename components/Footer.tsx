@@ -4,7 +4,7 @@ const footerNavigation = {
   product: [
     { name: "Documentation", href: "/docs" },
     { name: "Architecture", href: "/architecture" },
-    { name: "Examples", href: "/examples" },
+    { name: "Demo", href: "/demo" },
   ],
   resources: [
     { name: "Getting Started", href: "/docs/getting-started" },

@@ -72,7 +72,7 @@ const examples = [
       "@RequirePayment() decorator",
       "Guards & Dependency Injection",
       "3 endpoints (FREE, $0.001, $0.005)",
-      "Production-ready architecture"
+      "Complete architecture"
     ],
     complexity: "Intermediate",
     lines: 125,
@@ -115,7 +115,7 @@ export default function ExamplesPage() {
               Working Examples
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              5 complete, production-ready examples demonstrating x402 integration across different frameworks
+              5 complete examples demonstrating x402 integration across different frameworks
             </p>
           </div>
 

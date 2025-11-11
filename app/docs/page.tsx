@@ -101,7 +101,7 @@ export default function DocsPage() {
         >
           <h2 className="text-2xl font-bold mb-8">Quick Links</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/examples">
+            <Link href="/demo">
               <Card className="cursor-pointer hover:border-primary">
                 <h3 className="font-semibold mb-2">Examples</h3>
                 <p className="text-sm text-muted">Working examples for common use cases</p>
