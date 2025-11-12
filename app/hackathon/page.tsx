@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
 import CodeBlock from "@/components/CodeBlock";
-import { Trophy, Target, Code, Users, Rocket, CheckCircle2, DollarSign } from "lucide-react";
+import { Trophy, Target, Code, Users, Rocket, CheckCircle2, DollarSign, Video, Play } from "lucide-react";
 
 export default function HackathonPage() {
   return (
@@ -29,17 +29,52 @@ export default function HackathonPage() {
             </p>
           </div>
 
+          {/* Video Pitch */}
+          <section className="mb-12">
+            <a
+              href="https://www.loom.com/share/c80b080ffd24466bbbf848cf64f9df73"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <Card className="bg-gradient-to-r from-purple-50 to-blue-50 border-2 border-purple-200 hover:border-purple-300 transition-all hover:shadow-lg cursor-pointer">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 rounded-full bg-purple-600 flex items-center justify-center flex-shrink-0">
+                      <Play className="h-8 w-8 text-white ml-1" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 mb-1">
+                        <Video className="h-5 w-5 text-purple-600" />
+                        <h3 className="text-xl font-bold text-gray-900">Watch Our Pitch</h3>
+                      </div>
+                      <p className="text-sm text-muted">
+                        See x402 in action - a complete walkthrough of our payment channels solution
+                      </p>
+                    </div>
+                  </div>
+                  <div className="hidden sm:flex items-center gap-2 text-purple-600 font-semibold">
+                    <span className="text-sm">Watch Video</span>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </Card>
+            </a>
+          </section>
+
           {/* Project Overview */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-6">Project Overview</h2>
             <Card>
               <p className="text-muted mb-4">
-                x402 brings HTTP 402 Payment Required to life with Solana payment channels.
+                BoberPay brings HTTP 402 Payment Required to life with Solana payment channels.
                 Our protocol enables micropayments for API requests with 99.8% cost savings
                 compared to solana transaction, making true pay-per-use APIs economically viable.
               </p>
               <p className="text-muted">
-                Built for developers, x402 provides framework-agnostic TypeScript SDKs that integrate
+                Built for developers, BoberPay provides framework-agnostic TypeScript SDKs that integrate
                 seamlessly with Express, NestJS, Fastify, and any Node.js HTTP framework.
               </p>
             </Card>
