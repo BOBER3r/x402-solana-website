@@ -62,7 +62,7 @@ export default function ChannelPaymentFlow({ onComplete }: ChannelPaymentFlowPro
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           initialDeposit: '10000000', // $10.00 USDC
-          creditLimit: '5000000', // $5.00 credit
+          creditLimit: '0000000', // $5.00 credit
         }),
       });
 
