@@ -408,7 +408,7 @@ export default function ChannelPaymentFlow({ onComplete }: ChannelPaymentFlowPro
             <div className="grid grid-cols-2 gap-4 text-xs">
               <div>
                 <span className="text-muted">Available Balance:</span>
-                <div className="font-semibold">{channel.balance?.availableFormatted || '$15.00'}</div>
+                <div className="font-semibold">{channel.balance?.availableFormatted || '$10.00'}</div>
               </div>
               <div>
                 <span className="text-muted">Cumulative Spent:</span>

@@ -36,7 +36,7 @@ export default function PaymentChannelsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              href="https://github.com/BOBER3r/solana-payment-channel-kit"
+              href="https://github.com/BOBER3r/solana-payment-channel-kit/blob/main/X402_PAYMENT_CHANNELS_COMPLETE_IMPLEMENTATION_GUIDE.md"
               variant="primary"
               external
             >
